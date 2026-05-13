@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "stammdaten",
+      "app_id": "6a0479785996561e7eb888d3",
+      "path": "/rest/apps/6a0479785996561e7eb888d3/records",
+      "allowed_fields": [
+        "nachname",
+        "email",
+        "telefon",
+        "kategorie",
+        "status",
+        "notizen",
+        "vorname"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Stammdaten — Formular"
+    },
+    {
+      "entity": "aktivitaeten",
+      "app_id": "6a04797b355dad88d5f128f8",
+      "path": "/rest/apps/6a04797b355dad88d5f128f8/records",
+      "allowed_fields": [
+        "titel",
+        "beschreibung",
+        "datum_uhrzeit",
+        "ort",
+        "kapazitaet",
+        "aktivitaet_status"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Aktivitäten — Formular"
+    },
+    {
+      "entity": "zuordnungen",
+      "app_id": "6a04797cb57abfb8285398e8",
+      "path": "/rest/apps/6a04797cb57abfb8285398e8/records",
+      "allowed_fields": [
+        "zuordnungsdatum",
+        "rolle",
+        "bemerkungen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Zuordnungen — Formular"
+    }
+  ]
+}

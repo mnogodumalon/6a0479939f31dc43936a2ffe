@@ -1,0 +1,5 @@
+- Stammdaten (stammdaten): nachname[string/text], email[string/email], telefon[string/tel], kategorie[lookup/select], status[lookup/radio], notizen[string/textarea], vorname[string/text]
+- Aktivitäten (aktivitaeten): titel[string/text], beschreibung[string/textarea], datum_uhrzeit[date/datetimeminute], ort[string/text], kapazitaet[number], aktivitaet_status[lookup/select]
+- Zuordnungen (zuordnungen): person[applookup/select], aktivitaet[applookup/select], zuordnungsdatum[date/date], rolle[lookup/select], bemerkungen[string/textarea]
+  → person links to app_id 6a0479785996561e7eb888d3
+  → aktivitaet links to app_id 6a04797b355dad88d5f128f8
