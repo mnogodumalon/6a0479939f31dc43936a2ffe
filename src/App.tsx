@@ -6,7 +6,6 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import StammdatenPage from '@/pages/StammdatenPage';
 import AktivitaetenPage from '@/pages/AktivitaetenPage';
@@ -17,6 +16,8 @@ import PublicFormZuordnungen from '@/pages/public/PublicForm_Zuordnungen';
 // <public:imports>
 // </public:imports>
 // <custom:imports>
+const AktivitaetBesetzenPage = lazy(() => import('@/pages/intents/AktivitaetBesetzenPage'));
+const PersonEinplanenPage = lazy(() => import('@/pages/intents/PersonEinplanenPage'));
 // </custom:imports>
 
 export default function App() {
@@ -32,12 +33,14 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="stammdaten" element={<StammdatenPage />} />
                 <Route path="aktivitaeten" element={<AktivitaetenPage />} />
                 <Route path="zuordnungen" element={<ZuordnungenPage />} />
                 <Route path="admin" element={<AdminPage />} />
                 {/* <custom:routes> */}
+                <Route path="intents/aktivitaet-besetzen" element={<Suspense fallback={null}><AktivitaetBesetzenPage /></Suspense>} />
+                <Route path="intents/person-einplanen" element={<Suspense fallback={null}><PersonEinplanenPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>
